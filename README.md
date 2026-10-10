@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-.NET%2010%2B-purple.svg)
 ![Status](https://img.shields.io/badge/status-Active-success.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-informational.svg)
+![Version](https://img.shields.io/badge/version-1.1.0-informational.svg)
 [![Docker Hub](https://img.shields.io/docker/pulls/gafda/pidupe-net.svg)](https://hub.docker.com/r/gafda/pidupe-net)
 
 **PidupeDotNet** is a modern, high-performance image deduplication utility built on .NET 10 and Blazor Server. It identifies duplicate or near-duplicate image files using 7 comparison algorithms — CLIP, LPIPS, SSIM, pHash, dHash, Histogram, and MSE — with optional GPU acceleration.
@@ -66,7 +66,7 @@ Then open your browser at `http://localhost:8008`.
 | Tag | Architecture | Description |
 |-----|-------------|-------------|
 | `latest` | amd64 + arm64 | Latest stable release |
-| `1.0.0` | amd64 + arm64 | Specific version |
+| `1.1.0` | amd64 + arm64 | Specific version |
 
 Both tags are multi-arch manifest lists — Docker and Podman automatically pull the correct image for your host architecture.
 
@@ -214,7 +214,7 @@ docker run -d \
   -p 8008:8008 \
   -v /path/to/your/photos:/photos:ro \
   -v pidupe-data:/data \
-  gafda/pidupe-net:1.0.0
+  gafda/pidupe-net:1.1.0
 ```
 
 > Note: CLIP and LPIPS run on CPU on ARM64 as ONNX CUDA is not supported on this architecture.
